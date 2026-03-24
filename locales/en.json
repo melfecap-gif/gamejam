@@ -1,0 +1,29 @@
+{
+  "title": "StreetWise",
+  "subtitle": "The Tale of Two Rule-Breakers",
+  "start": "START GAME",
+  "mode": {
+    "dash": "DASH (DRIVING)",
+    "step": "STEP (WALKING)"
+  },
+  "intro": {
+    "greeting": "Welcome to StreetWise! Two rule-breakers, Dash and Step, need your help to choose safely.",
+    "chapters": [
+      "Intro: A reckless start. Dash speeds through a yellow light while Step crosses looking at his phone.",
+      "Chapter 1: The Right of Way. Dash learns why stopping at a stop sign isn't optional.",
+      "Chapter 2: The Invisible Pedestrian. Step learns the dangers of walking between parked cars.",
+      "Chapter 3: Sharing the Road. Both characters must navigate downtown together."
+    ]
+  },
+  "lessons": {
+    "stop_sign": "Always come to a COMPLETE stop at stop signs. Yield to those with priority.",
+    "phone": "Distracted walking is dangerous. Put your phone away before crossing.",
+    "parked_cars": "NEVER cross between parked cars. Drivers can't see you!",
+    "yield": "Yielding to pedestrians is the law, and it saves lives."
+  },
+  "feedback": {
+    "awareness": "AWARENESS",
+    "collision": "Lesson learned: Safety first!",
+    "good": "Good job! You followed the rules."
+  }
+}

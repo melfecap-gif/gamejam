@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetWise: The Tale of Two Rule-Breakers</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-layer">
+            <div id="awareness-meter">
+                <div id="meter-fill"></div>
+                <div id="meter-label">AWARENESS: 100%</div>
+            </div>
+            <div id="dialog-layer" class="hidden">
+                <div id="dialog-content"></div>
+                <button id="dialog-next">Próximo / Next</button>
+            </div>
+            <div id="overlay-layer">
+                <div id="intro-screen">
+                    <h1>StreetWise</h1>
+                    <p>The Tale of Two Rule-Breakers</p>
+                    <div class="lang-selection">
+                        <button id="lang-en">English</button>
+                        <button id="lang-pt">Português</button>
+                    </div>
+                    <button id="start-btn" class="hidden">START GAME</button>
+                </div>
+            </div>
+            <div id="dashboard" class="hidden">
+                <div id="mode-display">DASH (DRIVING)</div>
+                <div id="objective-display">OBJ: SPEED LIMIT 50 KM/H</div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+:root {
+    --primary: #4ade80;
+    --danger: #f87171;
+    --bg-dark: #1e293b;
+    --bg-light: #f8fafc;
+    --text-dark: #334155;
+    --text-light: #f1f5f9;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    user-select: none;
+}
+
+#game-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#ui-layer > * {
+    pointer-events: auto;
+}
+
+/* Awareness Meter */
+#awareness-meter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+#meter-fill {
+    height: 8px;
+    background: linear-gradient(90.1deg, #4ade80 0.1%, #34d399 99.8%);
+    width: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+#meter-label {
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+/* Dialog Layer */
+#dialog-layer {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: 200;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+#dialog-content {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#dialog-next {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background: var(--bg-dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+#dialog-next:hover {
+    background: #334155;
+    transform: translateY(-2px);
+}
+
+/* Overlay Layer (Intro/Menus) */
+#overlay-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 41, 59, 0.85);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    transition: opacity 0.5s ease;
+}
+
+#intro-screen {
+    text-align: center;
+    color: white;
+}
+
+#intro-screen h1 {
+    font-size: 80px;
+    margin: 0;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #4ade80, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#intro-screen p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 10px 0 40px;
+}
+
+.lang-selection {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.lang-selection button, #start-btn {
+    padding: 14px 28px;
+    background: white;
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#start-btn {
+    background: var(--primary);
+    color: white;
+    width: 200px;
+    box-shadow: 0 4px 0px #166534;
+}
+
+#start-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 0px #166534;
+}
+
+/* Utils */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    display: none !important;
+}
+
+#dashboard {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#mode-display {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 14px;
+}
+
+#objective-display {
+    font-size: 12px;
+    opacity: 0.9;
+}

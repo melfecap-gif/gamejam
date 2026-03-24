@@ -1,0 +1,29 @@
+{
+  "title": "StreetWise",
+  "subtitle": "O Conto de Dois Desobedientes",
+  "start": "INICIAR JOGO",
+  "mode": {
+    "dash": "DASH (DIRIGINDO)",
+    "step": "STEP (ANDANDO)"
+  },
+  "intro": {
+    "greeting": "Bem-vindo ao StreetWise! Dois desobedientes, Dash e Step, precisam da sua ajuda para escolher com segurança.",
+    "chapters": [
+      "Início: Um começo imprudente. Dash corre no sinal amarelo enquanto Step atravessa olhando o celular.",
+      "Capítulo 1: A Preferencial. Dash aprende por que parar no sinal de 'Pare' não é opcional.",
+      "Capítulo 2: O Pedestre Invisível. Step aprende o perigo de atravessar entre carros estacionados.",
+      "Capítulo 3: Compartilhando a Via. Ambos os personagens devem navegar o centro da cidade juntos."
+    ]
+  },
+  "lessons": {
+    "stop_sign": "Sempre pare COMPLETAMENTE no sinal de 'PARE'. Dê preferência a quem tem prioridade.",
+    "phone": "Caminhar distraído é perigoso. Guarde o celular antes de atravessar.",
+    "parked_cars": "NUNCA atravesse entre carros estacionados. Motoristas não podem vê-lo!",
+    "yield": "Dar preferência ao pedestre é lei, e salva vidas."
+  },
+  "feedback": {
+    "awareness": "CONSCIÊNCIA",
+    "collision": "Lição aprendida: Segurança em primeiro lugar!",
+    "good": "Bom trabalho! Você seguiu as regras."
+  }
+}
