@@ -79,7 +79,6 @@ class Game {
 
     document.getElementById('lang-en').onclick = () => this.selectLanguage('en');
     document.getElementById('lang-pt').onclick = () => this.selectLanguage('pt');
-    document.getElementById('start-btn').onclick = () => this.startGame();
     document.getElementById('dialog-next').onclick = () => this.hideDialog();
   }
 
@@ -88,14 +87,14 @@ class Game {
     this.languageSelected = true;
     document.getElementById('lang-en').classList.add('hidden');
     document.getElementById('lang-pt').classList.add('hidden');
-    document.getElementById('start-btn').classList.remove('hidden');
     this.updateUIText();
+    this.startGame();
   }
 
   updateUIText() {
     document.querySelector('#intro-screen h1').innerText = t('title');
     document.querySelector('#intro-screen p').innerText = t('subtitle');
-    document.getElementById('start-btn').innerText = t('start');
+
     document.getElementById('mode-display').innerText = this.mode === 'dash' ? t('mode.dash') : t('mode.step');
     document.getElementById('meter-label').innerText = t('feedback.awareness') + ': ' + Math.round(this.awareness) + '%';
   }
