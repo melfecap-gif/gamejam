@@ -15,11 +15,11 @@ class Game {
     this.languageSelected = false;
     this.clock = new THREE.Clock();
 
+    this.initListeners();
     this.initScene();
     this.initPhysics();
     this.initWorld();
     this.initTriggerSystem();
-    this.initListeners();
     this.animate();
   }
 
@@ -83,10 +83,14 @@ class Game {
   }
 
   async selectLanguage(lang) {
-    await initI18n(lang);
+    try {
+      await initI18n(lang);
+    } catch (e) {
+      console.warn("I18n init failed, continuing anyway", e);
+    }
     this.languageSelected = true;
-    document.getElementById('lang-en').classList.add('hidden');
-    document.getElementById('lang-pt').classList.add('hidden');
+    document.getElementById('lang-en').style.display = 'none';
+    document.getElementById('lang-pt').style.display = 'none';
     this.updateUIText();
     this.startGame();
   }

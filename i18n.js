@@ -3,13 +3,18 @@ import en from './locales/en.json';
 import pt from './locales/pt.json';
 
 export async function initI18n(lang = 'en') {
-  await i18next.init({
-    lng: lang,
-    resources: {
-      en: { translation: en },
-      pt: { translation: pt }
-    }
-  });
+  try {
+    await i18next.init({
+      lng: lang,
+      fallbackLng: 'en',
+      resources: {
+        en: { translation: en },
+        pt: { translation: pt }
+      }
+    });
+  } catch (err) {
+    console.error("I18n failed to initialize:", err);
+  }
 }
 
 export function t(key) {
